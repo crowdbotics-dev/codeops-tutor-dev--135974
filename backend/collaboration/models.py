@@ -13,9 +13,9 @@ class Event(models.Model):
         blank=False,
     )
     location = models.CharField(
-        max_length=255,
         null=True,
         blank=True,
+        max_length=255,
     )
 
 

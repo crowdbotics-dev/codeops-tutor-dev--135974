@@ -41,6 +41,10 @@ class User(AbstractUser):
         null=True,
         blank=True,
     )
+    phone = models.TextField(
+        null=True,
+        blank=True,
+    )
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})

@@ -9,9 +9,9 @@ class ConsultancySession(models.Model):
     )
     consultant = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=False,
         blank=False,
+        on_delete=models.CASCADE,
         related_name="consultancy_sessions",
     )
     date = models.DateTimeField(
@@ -20,9 +20,9 @@ class ConsultancySession(models.Model):
     )
     duration = models.IntegerField()
     company = models.CharField(
-        max_length=255,
         null=True,
         blank=True,
+        max_length=255,
     )
 
 

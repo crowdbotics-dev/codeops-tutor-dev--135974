@@ -1,5 +1,5 @@
 from rest_framework import authentication
-from courses.models import Course, Certification
+from courses.models import Certification, Course
 from .serializers import CertificationSerializer, CourseSerializer
 from rest_framework import viewsets
 

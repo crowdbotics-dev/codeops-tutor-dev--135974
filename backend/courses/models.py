@@ -16,9 +16,9 @@ class Course(models.Model):
     )
     instructor = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=False,
         blank=False,
+        on_delete=models.CASCADE,
         related_name="courses_taught",
     )
 
@@ -27,16 +27,16 @@ class Certification(models.Model):
     "Generated Model"
     course = models.ForeignKey(
         "courses.Course",
-        on_delete=models.CASCADE,
         null=False,
         blank=False,
+        on_delete=models.CASCADE,
         related_name="certification_course",
     )
     user = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=False,
         blank=False,
+        on_delete=models.CASCADE,
         related_name="certification_user",
     )
     date_issued = models.DateField(

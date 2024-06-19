@@ -12,9 +12,9 @@ class ContentItem(models.Model):
     )
     course = models.ForeignKey(
         "courses.Course",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="contentitem_course",
     )
     content = models.TextField()
